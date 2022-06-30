@@ -16,6 +16,8 @@ import { WorksComponent } from './pages/works/works.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeModule } from './pages/home/home.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DarkModeComponent } from './shared/components/dark-mode/dark-mode.component';
+import { UiKitsModule } from './shared/ui-kits/ui-kits.module';
 
 
 
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MarketingComponent,
     DisenioComponent,
     WorksComponent,
+    DarkModeComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,11 +42,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SlickCarouselModule,
     HomeModule,
     CarouselModule,
-    BrowserAnimationsModule
-
-
+    BrowserAnimationsModule,
   ],
-  providers: [SharedModule, CoreModule],
+  providers: [SharedModule, CoreModule, DarkModeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
